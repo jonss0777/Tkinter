@@ -2,7 +2,6 @@
 from PIL import Image, ImageTk
 import os
 
-
 def objectCheckBounds(dx, dy, cx, cy, paddingWidth, paddingHeight):
     if not (cy - paddingHeight >= 0 and cy +  paddingHeight<= dy):
         print("Outside")

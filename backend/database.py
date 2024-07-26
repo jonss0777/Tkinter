@@ -6,7 +6,12 @@ from credentials import cred
 # Getting credentials
 uri = cred()
 
-def connectToDatabase(collectionName):
+def connectToDatabase():
     # Create a new client and connect to the server
-    client = MongoClient(uri, server_api=ServerApi('1'))
-    return client    
+    try:
+        client = MongoClient(uri, server_api=ServerApi('1'))  
+        print("Connected to MongoDB")
+        return client
+    
+    except Exception as e:
+        print(f"Error: {e}")

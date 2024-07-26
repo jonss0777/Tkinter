@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Home</p>"
+    return "<p>Hey feel free to download the game</p>"
 
 @app.route("/register")
 def register():
